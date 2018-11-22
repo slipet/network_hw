@@ -124,12 +124,10 @@ int main(int argc, char **argv)
         exit(4);
     }
 
-    /* 景繼續執行 */
-    //if(fork() != 0)
-      //  return 0;
+
 
     /* 讓父行程不必等待子行程結束 */
-    signal(SIGCLD, SIG_IGN);
+    signal(SIGCHLD, SIG_IGN);
 
     /* 開啟網路 Socket */
     if ((listenfd=socket(AF_INET, SOCK_STREAM,0))<0)
