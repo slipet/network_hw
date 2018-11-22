@@ -139,7 +139,7 @@ int main(int argc, char **argv)
     //serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
 
     /* 使用 80 Port */
-    serv_addr.sin_port = htons(8700);
+    serv_addr.sin_port = htons(80);
 
     /* 開啟網路監聽器 */
     if (bind(listenfd, (struct sockaddr *)&serv_addr,sizeof(serv_addr))<0)
